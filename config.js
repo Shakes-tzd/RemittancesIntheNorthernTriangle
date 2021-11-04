@@ -6,8 +6,8 @@ var config = {
     theme: 'light',
     use3dTerrain: false,
     title: 'Remittances In the Northern Triangle',
-    subtitle: 'Remittances Are a Vital Source of Income for the Countries in the Northern',
-    byline: 'By Shakes',
+    subtitle: 'Remittances Are a Vital Source of Income for the Countries in the Northern Triangle',
+    byline: 'By Thandolwethu Dlamini',
     footer: "Source: Ng, J. J. L., Salgado, G. J. C., Espinosa, L. A., &amp; Serrano, C. (2020, October 7). Yearbook of migration and remittances Mexico 2020. BBVA Research. Retrieved November 4, 2021, from https://www.bbvaresearch.com/en/publicaciones/yearbook-of-migration-and-remittances-mexico-2020/. ",
     chapters: [
         {
