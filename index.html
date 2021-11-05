@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Mapbox Storytelling</title>
+    <title>Remittances in The Northern Triangle</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
@@ -190,11 +190,18 @@ config.chapters.forEach((record, idx) => {
         title.innerText = record.title;
         chapter.appendChild(title);
     }
-
+    // Creates the image for the vignette
     if (record.image) {
         var image = new Image();
         image.src = record.image;
         chapter.appendChild(image);
+    }
+    // Creates the image credit for the vignette
+    if (record.imageCredit) {
+        var imageCredit = document.createElement('p');
+        imageCredit.classList.add('imageCredit');
+        imageCredit.innerHTML = 'Image credit: ' + record.imageCredit;
+        chapter.appendChild(imageCredit);
     }
 
     if (record.description) {
@@ -202,6 +209,7 @@ config.chapters.forEach((record, idx) => {
         story.innerHTML = record.description;
         chapter.appendChild(story);
     }
+
 
     container.setAttribute('id', record.id);
     container.classList.add('step');
@@ -285,6 +293,7 @@ map.on("load", function() {
             }
         });
     };
+    
 
     // setup the instance, pass callback functions
     scroller
